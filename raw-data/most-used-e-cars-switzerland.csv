@@ -1,0 +1,11 @@
+Brand;Model;BatterySizeMin;BatterySizeMax;RangeMin;RangeMax
+Tesla;Model 3;52;82;409;560
+VW;ID.3;45;77;348;549
+Renault;Zoe;52;52;365;365
+Fiat;500e;37;42;175;230
+Skoda;Enyaq;52;77;295;420
+VW:ID.4;52;82;345;482
+Audi;e-tron;51.5;85;295;405
+Tesla;Model Y;75;75;480;540
+Hyundai;Kona EV;39;72;250;395
+Volvo;XC40;67;75;315;340
