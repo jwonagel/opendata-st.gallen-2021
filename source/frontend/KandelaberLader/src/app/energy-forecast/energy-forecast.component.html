@@ -1,12 +1,32 @@
-<h2 mat-dialog-title>Eco Forecast</h2>
-<div class="content">
-    <div *ngIf="forecast">
-        <highcharts-chart [Highcharts]="Highcharts"
+<!-- <div class="component">
+    <div class="content">
 
-        [options]="chartOptions"
+        <div *ngIf="forecast">
+            <highcharts-chart [Highcharts]="Highcharts" class="chart"
+            [options]="chartOptions"
       
-
-  style="width: 100%; height: 400px; display: block;"
-></highcharts-chart>
+    ></highcharts-chart>
+        </div>
     </div>
-</div>
+</div> -->
+
+
+<!-- <mat-grid-list cols="2" class="grid">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>
+       
+    </mat-grid-tile>
+  </mat-grid-list> -->
+  
+  <div class="grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div> 
+        <div *ngIf="forecast">
+            <highcharts-chart [Highcharts]="Highcharts" class="chart" [options]="chartOptions"></highcharts-chart>
+        </div>
+    </div>
+  </div>
