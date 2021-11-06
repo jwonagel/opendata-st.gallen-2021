@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>Eco Forecast</h2>
+<div class="content">
+    <div *ngIf="forecast">
+        <div *ngFor="let s of (forecast | async).series">
+            {{s.name}}
+        </div>
+    </div>
+</div>

@@ -13,6 +13,7 @@ export class AppComponent implements AfterViewInit {
   public map: any;
 
   private initMap(): void {
+    return;
     // this.map = L.map('map', {
     //   center: [47.42391, 9.37477],
     //   zoom: 13
