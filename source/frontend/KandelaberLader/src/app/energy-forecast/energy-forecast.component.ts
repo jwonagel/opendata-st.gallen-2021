@@ -11,12 +11,14 @@ import * as Highcharts from 'highcharts';
 export class EnergyForecastComponent implements OnInit {
 
   forecast?: any;
-  Highcharts=Highcharts;
+  Highcharts = Highcharts;
   chartConstructor: string = 'chart'; // optional string, defaults to 'chart'
-  chartOptions: Highcharts.Options = { series: [{
-    type: 'line',
-  }]};
-  chartCallback: Highcharts.ChartCallbackFunction = function (chart) {  } // optional function, defaults to null
+  chartOptions: Highcharts.Options = {
+    series: [{
+      type: 'spline',
+    }]
+  };
+  chartCallback: Highcharts.ChartCallbackFunction = function (chart) { } // optional function, defaults to null
   updateFlag: boolean = false; // optional boolean
   oneToOneFlag: boolean = true; // optional boolean, defaults to false
   runOutsideAngular: boolean = false; // optional boolean, defaults to false
@@ -27,37 +29,61 @@ export class EnergyForecastComponent implements OnInit {
     this.ecoForecastService.getEcoForecastData()
       .subscribe(x => {
         this.forecast = x;
-        this.chartOptions = { 
+        this.chartOptions = {
           title: {
             text: 'Ökovorhersage'
           },
           subtitle: {
-              text: 'Zeitpunkte mit hohem Solarstromanteil'
+            text: 'Zeitpunkte mit hohem Solarstromanteil'
           },
           series: [{
-          type: 'line',
-          data: x.series[1].data,
-          pointStart: Date.parse(x.series[0].data[0]),
-          pointInterval: 3600 * 1000,
-        }],
-        yAxis: {
-          title: {
-            text: 'Eco Index'
-        }
-        },  
-        xAxis: {
-          title: {
-           text: 'Date'
+            type: 'spline',
+            name: "Energie (Wh)",
+            data: x.series[1].data,
+            pointStart: Date.parse(x.series[0].data[0]),
+            pointInterval: 3600 * 1000,
+          }],
+          yAxis: {
+            title: {
+              text: 'Eco Index'
+            },
+            plotBands: [
+              { // Light air
+                from: 10000001,
+                to: 40000000,
+                color: 'rgba(0,255,0,0.3)',
+                label: {
+                  text: 'Ökostrom',
+                  style: {
+                    color: '#606060'
+                  }
+                }
+              }
+              , { // Light air
+                from: 0,
+                to: 10000000,
+                color: 'rgba(68, 170, 213, 0.1)',
+                label: {
+                  text: 'Graustrom',
+                  style: {
+                    color: '#606060'
+                  }
+                }
+              }],
           },
-          type: 'datetime'
-        },
-        chart: {
-          backgroundColor: 'rgba(255, 255, 255, 0.8)'
-        }
-        
-     };
+          xAxis: {
+            title: {
+              text: 'Date'
+            },
+            type: 'datetime'
+          },
+          chart: {
+            backgroundColor: 'rgba(255, 255, 255, 0.8)'
+          }
 
-    });
+        };
+
+      });
   }
 }
 
