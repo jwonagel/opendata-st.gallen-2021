@@ -20,6 +20,8 @@
     "@angular/platform-browser": "~13.0.0",
     "@angular/platform-browser-dynamic": "~13.0.0",
     "@angular/router": "~13.0.0",
+    "highcharts": "^9.3.1",
+    "highcharts-angular": "^2.10.0",
     "leaflet": "^1.7.1",
     "leaflet-tilelayer-swiss": "^2.2.1",
     "rxjs": "~7.4.0",
