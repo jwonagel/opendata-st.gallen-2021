@@ -20,9 +20,9 @@ export class AppComponent implements AfterViewInit {
 
     this.map = L.map('map', {
       crs: (<any>L.CRS).EPSG2056,
-      center: [2747115.250, 1254358.875],
-      //center: [47.42391, 9.37477],
-      zoom: 13
+      // center: [2747115.250, 1254358.875],
+      center: [47.42391, 9.37477],
+      zoom: 9
     });
 
     var satelliteLayer = (<any>L.tileLayer).swiss({
@@ -65,17 +65,18 @@ export class AppComponent implements AfterViewInit {
 
     L.control.layers(baseMaps, overlayMaps).addTo(this.map);
 
-    this.loadParking()
-    this.map.fitSwitzerland();
+    // this.map.fitSwitzerland();
 
     console.log(this.map);
+
+    this.map.flyTo([47.42391, 9.37477], 20)
   }
 
   private loadParking() {
 
     var geojsonMarkerOptions = {
       radius: 8,
-      fillColor: "#ff7800",
+      fillColor: "#0078FF",
       color: "#000",
       weight: 1,
       opacity: 1,
@@ -499,7 +500,103 @@ export class AppComponent implements AfterViewInit {
         { "type": "Feature", "properties": { "parkplatz_strasse": 2.0, "parkplatz_art": "Erweiterte Blaue Zone", "anzahl_naheliegender_kandelaber": 1 }, "geometry": { "type": "Point", "coordinates": [2746148.398462995886803, 1256024.859820683952421] } }
       ]
     };
-    return L.geoJSON(<any>geoJson, {
+
+    const g = {
+      "type": "FeatureCollection",
+      "features": [
+          {
+              "type": "Feature",
+              "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                      9.382834656327638,
+                      47.42902875037638
+                  ]
+              },
+              "properties": {
+                  "information": "Weiss (bewirtschaftet): 3",
+                  "land": "Schweiz",
+                  "ort": "St.Gallen",
+                  "adresse": "Burkhardstrasse",
+                  "plz": "9000",
+                  "geo_point": [
+                      47.4290287504,
+                      9.38283465633
+                  ],
+                  "parkplatzart": "Weiss (bewirtschaftet)",
+                  "anzahl_parkplatze": 3.0,
+                  "kategorie": "Parkpl\u00e4tze, Parkh\u00e4user"
+              }
+          },
+          {
+              "type": "Feature",
+              "geometry": {
+                  "type": "Point",
+                  "coordinates": [
+                      9.372953860396953,
+                      47.42245089499034
+                  ]
+              },
+              "properties": {
+                  "information": "Weiss (bewirtschaftet): 3",
+                  "land": "Schweiz",
+                  "ort": "St.Gallen",
+                  "adresse": "Schreinerstrasse",
+                  "plz": "9000",
+                  "geo_point": [
+                      47.422450895,
+                      9.3729538604
+                  ],
+                  "parkplatzart": "Weiss (bewirtschaftet)",
+                  "anzahl_parkplatze": 3.0,
+                  "kategorie": "Parkpl\u00e4tze, Parkh\u00e4user"
+              }
+          }
+        ]};
+
+
+    const foo = {
+      "type": "FeatureCollection",
+      "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+      "features": [
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "M�hlenstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.377932002605082, 47.422168140293131 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "M�hlenstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.377932002605082, 47.422168140293131 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Z�rcher Strasse", "plz": "9015", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 10.0 }, "geometry": { "type": "Point", "coordinates": [ 9.298056519949315, 47.407632499539957 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Wiesenstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.380939350443741, 47.417392080183994 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Wiesenstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.380939350443741, 47.417392080183994 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Kirchlistrasse", "plz": "9010", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 3.0 }, "geometry": { "type": "Point", "coordinates": [ 9.383837959146161, 47.444911975649426 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Altwinkelnstrasse", "plz": "9015", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 1.0 }, "geometry": { "type": "Point", "coordinates": [ 9.302667685217223, 47.401711518166067 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Haselstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 10.0 }, "geometry": { "type": "Point", "coordinates": [ 9.341828059562671, 47.40544896216295 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Haselstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 10.0 }, "geometry": { "type": "Point", "coordinates": [ 9.34199486115766, 47.405077038991067 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Haselstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 10.0 }, "geometry": { "type": "Point", "coordinates": [ 9.34199486115766, 47.405077038991067 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Scheidwegstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 4.0 }, "geometry": { "type": "Point", "coordinates": [ 9.403530193314692, 47.434983186799656 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Scheidwegstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 4.0 }, "geometry": { "type": "Point", "coordinates": [ 9.403530193314692, 47.434983186799656 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Dietlistrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 4.0 }, "geometry": { "type": "Point", "coordinates": [ 9.359937795497279, 47.423967392187159 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "St.Leonhard-Strasse", "plz": "9000", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 13.0 }, "geometry": { "type": "Point", "coordinates": [ 9.369293451212977, 47.42204003540698 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "St.Leonhard-Strasse", "plz": "9000", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 13.0 }, "geometry": { "type": "Point", "coordinates": [ 9.368709776618175, 47.421813056034793 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "St.Leonhard-Strasse", "plz": "9000", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 13.0 }, "geometry": { "type": "Point", "coordinates": [ 9.368709776618175, 47.421813056034793 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Kapellenstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 3.0 }, "geometry": { "type": "Point", "coordinates": [ 9.373789617771102, 47.420714621218941 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "Schwertgasse", "plz": "9000", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 6.0 }, "geometry": { "type": "Point", "coordinates": [ 9.377604010325451, 47.427789494450295 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "Schwertgasse", "plz": "9000", "parkplatzart": "Weiss (bewirtschaftet)", "anzahl_parkplatze": 6.0 }, "geometry": { "type": "Point", "coordinates": [ 9.377604010325451, 47.427789494450295 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "D�rrenmattstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 3.0 }, "geometry": { "type": "Point", "coordinates": [ 9.354895923174123, 47.418887104755569 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Lessingstrasse", "plz": "9008", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 5.0 }, "geometry": { "type": "Point", "coordinates": [ 9.383303449740986, 47.436317075807004 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Lessingstrasse", "plz": "9008", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 5.0 }, "geometry": { "type": "Point", "coordinates": [ 9.383303449740986, 47.436317075807004 ] } },
+      { "type": "Feature", "properties": { "typ": "Beleuchtungsmast", "adresse": "Teufener Strasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 5.0 }, "geometry": { "type": "Point", "coordinates": [ 9.365807567969764, 47.41614389148058 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "B�chelstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 5.0 }, "geometry": { "type": "Point", "coordinates": [ 9.363392968532089, 47.419731542543452 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Stephanshornstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 7.0 }, "geometry": { "type": "Point", "coordinates": [ 9.406339622219788, 47.439792215213771 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Stephanshornstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 7.0 }, "geometry": { "type": "Point", "coordinates": [ 9.406339622219788, 47.439792215213771 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Stephanshornstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 7.0 }, "geometry": { "type": "Point", "coordinates": [ 9.406777117056537, 47.439793008838578 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Stephanshornstrasse", "plz": "9016", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 7.0 }, "geometry": { "type": "Point", "coordinates": [ 9.406777117056537, 47.439793008838578 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Lehnstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 19.0 }, "geometry": { "type": "Point", "coordinates": [ 9.326491572715589, 47.404841971246675 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Lehnstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 19.0 }, "geometry": { "type": "Point", "coordinates": [ 9.326960810824781, 47.404961201341898 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Lehnstrasse", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 19.0 }, "geometry": { "type": "Point", "coordinates": [ 9.327388387528442, 47.405102883605821 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Tigerbergstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.370427616840354, 47.427884413878481 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Tigerbergstrasse", "plz": "9000", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 2.0 }, "geometry": { "type": "Point", "coordinates": [ 9.370427616840354, 47.427884413878481 ] } },
+      { "type": "Feature", "properties": { "typ": "Kandelaberleuchte", "adresse": "Hinterberg", "plz": "9014", "parkplatzart": "Erweiterte Blaue Zone", "anzahl_parkplatze": 3.0 }, "geometry": { "type": "Point", "coordinates": [ 9.325530987870446, 47.403634248500815 ] } }
+      ]
+      };
+
+    return L.geoJSON(<any>foo, {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
       }

@@ -27,7 +27,14 @@ export class EnergyForecastComponent implements OnInit {
     this.ecoForecastService.getEcoForecastData()
       .subscribe(x => {
         this.forecast = x;
-        this.chartOptions = { series: [{
+        this.chartOptions = { 
+          title: {
+            text: 'Ökovorhersage'
+          },
+          subtitle: {
+              text: 'Zeitpunkte mit hohem Solarstromanteil'
+          },
+          series: [{
           type: 'line',
           data: x.series[1].data,
           pointStart: Date.parse(x.series[0].data[0]),
@@ -44,6 +51,10 @@ export class EnergyForecastComponent implements OnInit {
           },
           type: 'datetime'
         },
+        chart: {
+          backgroundColor: 'rgba(255, 255, 255, 0.8)'
+        }
+        
      };
 
     });

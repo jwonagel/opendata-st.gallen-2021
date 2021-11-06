@@ -7,7 +7,7 @@ import { EnergyForecastComponent } from './energy-forecast/energy-forecast.compo
 import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { HighchartsChartModule } from 'highcharts-angular';
-
+import {MatGridListModule} from '@angular/material/grid-list'; 
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { HighchartsChartModule } from 'highcharts-angular';
     MatToolbarModule,
     HttpClientModule,
     MatDialogModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatGridListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
