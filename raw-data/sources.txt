@@ -1,0 +1,2 @@
+EV: Data https://ev-database.de/#sort:path~type~order=.rank~number~desc|range-slider-range:prev~next=10~1000|range-slider-eff:prev~next=100~300|range-slider-acceleration:prev~next=2~23|range-slider-fastcharge:prev~next=0~1500|range-slider-bijtelling:prev~next=0~1200|range-slider-topspeed:prev~next=110~450|paging:currentPage=0|paging:number=9
+ev zulassungen: • https://www.autonews.ch/?p=31083

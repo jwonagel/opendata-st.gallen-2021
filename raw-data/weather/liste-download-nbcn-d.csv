@@ -1,0 +1,54 @@
+Station;station/location;WIGOS-ID;Data since;Station height m. a. sea level;CoordinatesE;CoordinatesN;Latitude;Longitude;Climate region;Canton;URL Previous years (verified data);URL Current year
+Altdorf;ALT;0-20000-0-06672;01.01.1864;438;2690181;1193564;46.887069;8.621894;Central Alpine north slope;UR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ALT_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ALT_current.csv
+Andermatt;ANT;0-20000-0-06695;01.01.1864;1438;2687445;1165044;46.630914;8.580553;Central Alpine north slope;UR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ANT_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ANT_current.csv
+Basel / Binningen;BAS;0-20000-0-06601;01.01.1755;316;2610909;1265612;47.541142;7.583525;Eastern Jura;BL;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_BAS_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_BAS_current.csv
+Bern / Zollikofen;BER;0-20000-0-06631;01.01.1864;553;2601934;1204410;46.990744;7.464061;Central plateau;BE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_BER_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_BER_current.csv
+La Chaux-de-Fonds;CDF;0-20000-0-06612;01.01.1900;1017;2550919;1214862;47.082947;6.792314;Western Jura;NE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CDF_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CDF_current.csv
+Château-d'Oex;CHD;0-20000-0-06627;01.01.1879;1028;2577040;1147655;46.479819;7.139656;Western Alpine north slope;VD;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CHD_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CHD_current.csv
+Chaumont;CHM;0-20000-0-06608;01.01.1864;1136;2565060;1211007;47.049169;6.978825;Western Jura;NE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CHM_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_CHM_current.csv
+Davos;DAV;0-20000-0-06784;01.01.1864;1594;2783519;1187459;46.812969;9.843558;Northern and central Grisons;GR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_DAV_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_DAV_current.csv
+Elm;ELM;0-20000-0-06682;01.02.1878;958;2732266;1198425;46.923747;9.17535;Eastern Alpine north slope;GL;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ELM_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ELM_current.csv
+Engelberg;ENG;0-20000-0-06655;01.01.1864;1036;2674162;1186069;46.821639;8.410514;Central Alpine north slope;OW;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ENG_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_ENG_current.csv
+Grächen;GRC;0-20000-0-06728;01.01.1864;1605;2630738;1116062;46.195314;7.836822;Valais;VS;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GRC_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GRC_current.csv
+Grimsel Hospiz;GRH;0-20000-0-06744;01.01.1932;1980;2668583;1158215;46.571689;8.333256;Western Alpine north slope;BE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GRH_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GRH_current.csv
+Col du Grand St-Bernard;GSB;0-20000-0-06717;01.01.1818;2472;2579191;1079754;45.869092;7.170683;Alpine south side;VS;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GSB_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GSB_current.csv
+Genève / Cointrin;GVE;0-20000-0-06700;01.01.1753;411;2498904;1122632;46.247519;6.127742;Western plateau;GE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GVE_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_GVE_current.csv
+Jungfraujoch;JUN;0-20000-0-06730;01.01.1933;3571;2641939;1155287;46.547556;7.985444;Western Alpine north slope;VS;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_JUN_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_JUN_current.csv
+Lugano;LUG;0-20000-0-06770;01.01.1864;273;2717874;1095883;46.004217;8.960322;Alpine south side;TI;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_LUG_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_LUG_current.csv
+Luzern;LUZ;0-20000-0-06650;01.01.1864;454;2665545;1209850;47.036439;8.301022;Central plateau;LU;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_LUZ_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_LUZ_current.csv
+Meiringen;MER;0-20000-0-06637;01.07.1889;589;2655844;1175930;46.732222;8.169247;Western Alpine north slope;BE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_MER_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_MER_current.csv
+Neuchâtel;NEU;0-20000-0-06604;01.01.1864;485;2563087;1205560;47.000067;6.953297;Western plateau;NE;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_NEU_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_NEU_current.csv
+Locarno / Monti;OTL;0-20000-0-06760;01.12.1882;367;2704167;1114316;46.172256;8.787494;Alpine south side;TI;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_OTL_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_OTL_current.csv
+Payerne;PAY;0-20000-0-06610;01.08.1964;490;2562131;1184612;46.811581;6.942469;Western plateau;VD;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_PAY_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_PAY_current.csv
+Bad Ragaz;RAG;0-20000-0-06686;01.06.1870;497;2756911;1209351;47.016631;9.502594;Northern and central Grisons;SG;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_RAG_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_RAG_current.csv
+Säntis;SAE;0-20000-0-06680;01.01.1864;2501;2744188;1234920;47.249447;9.343469;Eastern Alpine north slope;AI;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SAE_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SAE_current.csv
+Samedan;SAM;0-20000-0-06792;01.01.1864;1709;2787251;1155685;46.526247;9.879469;Engadine;GR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SAM_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SAM_current.csv
+S. Bernardino;SBE;0-20000-0-06783;01.01.1864;1639;2734116;1147294;46.463542;9.1847;Alpine south side;GR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SBE_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SBE_current.csv
+Segl-Maria;SIA;0-20000-0-06779;01.12.1863;1804;2778576;1144976;46.432331;9.762325;Engadine;GR;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SIA_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SIA_current.csv
+Sion;SIO;0-20000-0-06720;01.01.1864;482;2591633;1118584;46.21865;7.330203;Valais;VS;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SIO_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SIO_current.csv
+Zürich / Fluntern;SMA;0-20000-0-06660;01.01.1864;556;2685118;1248066;47.377925;8.565742;North-eastern plateau;ZH;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SMA_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_SMA_current.csv
+St. Gallen;STG;0-20000-0-06681;01.01.1864;776;2747866;1254588;47.425475;9.398528;North-eastern plateau;SG;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_STG_previous.csv;https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/nbcn-daily_STG_current.csv
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;;;;;;;;;;;;
+;Delivery times;;;;;;;;;;;
+;"nbcn-monthly_<nat_abbr>_previous.csv    Delivery once a year after checking the data (February 1st; 12:20 UTC)";;;;;;;;;;;
+;nbcn-monthly_<nat_abbr>_current.csv     Delivery daily at 12:00 UTC;;;;;;;;;;;

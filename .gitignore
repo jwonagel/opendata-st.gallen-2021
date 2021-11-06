@@ -1,2 +1,7 @@
 
 swisstopo/data/
+
+**/venv
+
+**/.DS_Store
+raw-data/weather/stromproduktion-der-solaranlagen-der-stgaller-stadtwerke.csv

@@ -1,0 +1,115 @@
+﻿Klimamessnetz (Swiss NBCN) / Tageswerte
+**************************************************
+Downloads siehe:  https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/liste-download-nbcn-d.csv
+
+Lieferzeitpunkte
+*_previous.csv    Vergangene Jahre (geprüfte Daten); Lieferung einmal jährlich nach Prüfung der Daten (1.Februar; 12:20 UTC)
+*_current.csv     Aktuelles Jahr; Lieferung täglich um 12:00 UTC
+
+Aufbau der Datenfiles
+station/locatation;date;gre000d0;hto000d0;nto000d0;prestad0;rre150d0;sre000d0;tre200d0;tre200dn;tre200dx;ure200d0
+
+station/location     Stationskürzel <nat_abbr> 
+date                 Datum, Format yyyymmdd 
+
+Parameter            Einheit          Beschreibung
+gre000d0             W/m²             Globalstrahlung; Tagesmittel
+hto000d0             cm               Gesamtschneehöhe; Morgenmessung von 6 UTC
+nto000d0             %                Gesamtbewölkung; Tagesmittel
+prestad0             hPa              Luftdruck auf Stationshöhe (QFE); Tagesmittel
+rre150d0             mm               Niederschlag; Tagessumme 6 UTC - 6 UTC Folgetag
+sre000d0             min              Sonnenscheindauer; Tagessumme
+tre200d0             °C               Lufttemperatur 2 m über Boden; Tagesmittel
+tre200dn             °C               Lufttemperatur 2 m über Boden; Tagesminimum
+tre200dx             °C               Lufttemperatur 2 m über Boden; Tagesmaximum
+ure200d0             %                Relative Luftfeuchtigkeit 2 m über Boden; Tagesmittel
+
+Fehlende Messwerte   - 	
+
+
+Réseau climatique (Swiss NBCN) / Valeurs journalières
+*****************************************************
+Downloads voir:  https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/liste-download-nbcn-d.csv
+
+Délais de livraison
+*_previous.csv    Années précédentes (données vérifiées); Livraison une fois par an après vérification des données (1.février; 12:20 UTC)  
+*_current.csv     Année en cours; Livraison quotidienne à 12:00UTC
+
+Structure des fichiers des données
+station/locatation;date;gre000d0;hto000d0;nto000d0;prestad0;rre150d0;sre000d0;tre200d0;tre200dn;tre200dx;ure200d0
+
+station/location     Abbréviation de la station <nat_abbr> 
+date                 Date, Format yyyymmdd 
+
+Paramètres           Unité            Description
+gre000d0             W/m²             rayonnement global; moyenne journalière
+hto000d0             cm               épaisseur totale de neige gisante; mesure (matinale) de 6 UTC
+nto000d0             %                couverture nuageuse totale; moyenne journalière
+prestad0             hPa              pression atmosphérique à l'altitude de la station (QFE); moyenne journalière
+rre150d0             mm               précipitations; somme journalière conventionnelle 0540 - 0540 du jour suivant
+sre000d0             min              durée d'ensoleillement; somme journalière
+tre200d0             °C               température de l'air à 2 m du sol; moyenne journalière
+tre200dn             °C               température de l'air à 2 m du sol; minimum journalier 
+tre200dx             °C               température de l'air à 2 m du sol; maximum journalier
+ure200d0             %                humidité de l'air relative à 2 m du sol; moyenne journalière
+
+Valeurs manquantes   -
+
+
+Rete climatologica (Swiss NBCN) / Valori giornalieri
+****************************************************
+Downloads vedi: https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/liste-download-nbcn-d.csv
+
+Tempi di consegna
+*_previous.csv    Anni precedenti (dati verificati); Consegna una volta all'anno dopo aver controllato i dati (1.febbraio; 12:20 UTC)
+*_current.csv     Anno corrente; Consegna quotidiana alle 12:00 UTC
+
+struttura del file di dati 
+station/locatation;date;gre000d0;hto000d0;nto000d0;prestad0;rre150d0;sre000d0;tre200d0;tre200dn;tre200dx;ure200d0
+
+station/location     Abbreviazione della stazione  <nat_abbr> 
+date                 data, Format yyyymmdd 
+
+Parametro            Unità            Descrizione
+gre000d0             W/m²             Radiazione globale; media giornaliera
+hto000d0             cm               Altezza della neve totale; misura delle 6 UTC
+nto000d0             %                Nuvolosità; media giornaliera
+prestad0             hPa              Pressione alla stazione (QFE); media giornaliera
+rre150d0             mm               Precipitazioni; somma giornaliera convenzionale 6 UTC - 6 UTC del giorno seguente
+sre000d0             min              Soleggiamento; somma giornaliera
+tre200d0             °C               Temperatura dell'aria a 2 m; media giornaliera
+tre200dn             °C               Temperatura dell'aria a 2 m; minima giornaliera
+tre200dx             °C               Temperatura dell'aria a 2 m; massima giornaliera
+ure200d0             %                Umidità relativa dell'aria a 2 m; media giornaliera
+
+Valore mancanti      -
+
+
+Climatological network (Swiss NBCN) / Monthly values
+****************************************************
+Downloads see:  https://data.geo.admin.ch/ch.meteoschweiz.klima/nbcn-tageswerte/liste-download-nbcn-d.csv
+
+Delivery times
+*_previous.csv    Previous years (Verified data); Delivery once a year after checking the data (February 1st; 12:20 UTC)
+*_current.csv     Current year; Delivery daily at 12:00 UTC  
+
+Data file structure
+station/locatation;date;gre000d0;hto000d0;nto000d0;prestad0;rre150d0;sre000d0;tre200d0;tre200dn;tre200dx;ure200d0
+
+station/location     Station abbreviation 
+date                 Date, format yyyymmdd 
+
+Parameters           Unit             Description
+gre000d0             W/m²             Global radiation; daily mean
+hto000d0             cm               Total snow depth; morning recording at 6 UTC
+nto000d0             %                Cloud cover; daily mean
+prestad0             hPa              Pressure at station level (QFE); daily mean
+rre150d0             mm               Precipitation; daily total 6 UTC - 6 UTC following day
+sre000d0             min              Sunshine duration; daily total
+tre200d0             °C               Air temperature 2 m above ground; daily mean
+tre200dn             °C               Air temperature 2 m above ground; daily minimum
+tre200dx             °C               Air temperature 2 m above ground; daily maximum
+ure200d0             %                Relative air humidity; 2 m above ground; daily mean
+
+missing data         - 	
+
