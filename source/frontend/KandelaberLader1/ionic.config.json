@@ -1,0 +1,7 @@
+{
+  "name": "KandelaberLader",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
