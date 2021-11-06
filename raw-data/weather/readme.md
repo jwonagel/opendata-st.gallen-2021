@@ -32,3 +32,4 @@ Rain:
     Download Stromprod
 
     https://daten.sg.ch/explore/dataset/stromproduktion-der-solaranlagen-der-stgaller-stadtwerke%40stadt-stgallen/export/?disjunctive.name&disjunctive.smart_me_name&disjunctive.modultyp&disjunctive.leistung_modul_in_wp
+
