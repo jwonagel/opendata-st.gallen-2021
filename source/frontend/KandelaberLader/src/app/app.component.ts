@@ -112,16 +112,17 @@ export class AppComponent implements AfterViewInit {
   foo() {
     let that = this;
     if (navigator.geolocation) {
-      debugger;
       navigator.geolocation.getCurrentPosition(function(position) {
-        console.log('--- Your Position: ---');
-        console.log('Lat: ' + position.coords.latitude);
-        const latit = position.coords.latitude;
-        console.log('Long: ' + position.coords.longitude);
-        const longit = position.coords.longitude;
-        console.log('---------------------');
-        var abc = L.marker([position.coords.latitude, position.coords.longitude]).addTo(that.map);
-        that.map.flyTo(position.coords, 20)
+        var geojsonMarkerOptions = {
+          radius: 8,
+          fillColor: "#FF0000",
+          color: "#000",
+          weight: 1,
+          opacity: 1,
+          fillOpacity: 0.8
+        };
+        L.circleMarker([position.coords.latitude, position.coords.longitude], geojsonMarkerOptions).addTo(that.map);
+        that.map.flyTo([position.coords.latitude, position.coords.longitude], 24)
       }, function error(err) {
         console.warn(`ERROR(${err.code}): ${err.message}`);
       }); 
