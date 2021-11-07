@@ -10,6 +10,11 @@
 
   
 */
+
+.title{
+ padding-left: 10px;
+}
+
 #map {
   height: 100%;
   z-index: 0;

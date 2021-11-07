@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatDialogModule} from '@angular/material/dialog'; 
 import { HighchartsChartModule } from 'highcharts-angular';
 import {MatGridListModule} from '@angular/material/grid-list'; 
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatGridListModule} from '@angular/material/grid-list';
     HttpClientModule,
     MatDialogModule,
     HighchartsChartModule,
-    MatGridListModule
+    MatGridListModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
