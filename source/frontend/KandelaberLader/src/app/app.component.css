@@ -52,3 +52,11 @@
       z-index: 100;
       float: left;
   }
+
+  .current-pos {
+    position: absolute;
+      bottom: 112px;
+      left: 20px;
+      z-index: 100;
+      float: left;
+  }
