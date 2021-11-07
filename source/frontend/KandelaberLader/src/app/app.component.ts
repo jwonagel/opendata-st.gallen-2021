@@ -92,7 +92,14 @@ export class AppComponent implements AfterViewInit {
     return L.geoJSON(<any>chargers, {
       pointToLayer: function (feature, latlng) {
         return L.circleMarker(latlng, geojsonMarkerOptions);
-      }
+      },
+      onEachFeature: function (feature, layer) {
+        var html = "";
+        for (let prop in feature.properties){
+            html += prop+": "+feature.properties[prop]+"<br>";
+        };
+        layer.bindPopup(html);
+    }
     });
   }
 
