@@ -15,8 +15,7 @@ Unsere Lösung besteht aus drei separaten Komponenten:
 Damit ein Parkplatz als Ladestation in Frage kommt, muss in zwei Metern um den Parkplatz herum ein Kandelaber stehen, der mit einem Ladeanschluss versehen werden kann. Um diese zu finden, haben wir die Datensets [Parkplätze und Parkhäuser](https://daten.stadt.sg.ch/explore/dataset/parkplatze-und-parkhauser-stadt-stgallen/information/?disjunctive.kategorie&disjunctive.plz&disjunctive.parkplatzart), [Öffentliche Beleuchtung](https://daten.stadt.sg.ch/explore/dataset/offentliche-beleuchtung-stadt-stgallen/information/) und den [Gemeindestrassenplan](https://daten.stadt.sg.ch/explore/dataset/gemeindestrassenplan/information/?disjunctive.strassenkl&disjunctive.strassenna&disjunctive.strassennr) der Stadt St. Gallen verwendet.
 Die Daten haben wir in einem Jupyter Notebook mit Pandas und Geopandas weiterverarbeitet:
 
-Ausgehend von den Parkplätzen suchen wir den Strassenabschnitt und die Strassenseite, auf dem sich die Parkfelder befinden. Damit wiederum durchsuchen wir den Beleuchtungsdatensatz nach Kandelabern in der Nähe des Parkfeldes. Alle Parkfelder, die in zwei Meter Nähe eines Kandelabers stehen, exportieren wir als GeoJSON. So haben wir eine Liste der potentiell als Ladestation verwendbaren Parkplätze.
-
+Die Parkplätze sind als einzelne Punkte im Datensatz abgebildet. Mit diesen Punkten suchen wir den Strassenabschnitt, in dem sich die Parkplätze befinden. Den Punkt des Parkplatzes projezieren wir auf die Kontur der Trasse. So wissen wir an welcher Strassenseite sich die Parkfelder befinden und können entlang dem Strassenverlauf nach Kandelabern suchen. Alle Parkfelder, die in zwei Meter Nähe eines Kandelabers stehen, exportieren wir als GeoJSON. So haben wir eine Liste der potentiell als Ladestation verwendbaren Parkplätze.
 ### Voraussage Photovoltaik Ladeanteil
 
 Die E-Autos sollen wenn möglich mit grünem Strom / Photovoltaik-Strom geladen werden. Damit die Autofahrer möglichst vom Photovoltaik-Strom der Stadt profitieren können, möchten wir ihnen anzeigen, wann voraussichtlich viel Photovoltaik-Strom verfügbar sein wird.
@@ -35,7 +34,6 @@ Die E-Autofahrer sollen auf einer Webseite sehen, wo es in der Nähe ihres Zielo
 
 ## Challenges we ran into
 
-### Parkplatz-Positionen
 Die Parkplätze werden von der Stadt St. Gallen als geographische Punkte bereitgestellt. Parkflächen für mehrere Autos (z.B. eine blaue Zone für 4 Autos) sind ebenfalls nur als einzelner Punkt vorhanden. Um mögliche Ladestationen zu finden, benötigen wir die genaue Fläche der einzelnen Parkfelder, damit wir den Abstand zu Kandelabern möglichst genau berechnen können.
 Unsere erste Idee war, mittels Bilderkennung die genauen Parkplatzflächen in den Swisstopo Bilddaten nach den Parkfeldern zu suchen. Wegen fehlender vortrainierten Modellen oder Trainingsdaten für diesen Anwendungsfall haben wir diesen Ansatz aber wieder verworfen. Um das Problem schlussendlich zu lösen, haben wir einige Parkfelder der Stadt gemessen. Aufgrund der Parkplatzgrösse konnten wir den Strassenabschnitt / die Strassenseite eingrenzen, den wir nach möglichen Kandelabern absuchen. Um die Abstände korrekt zu messen bräuchten wir aber die genauen Positionen / Flächen der einzelnen Parkfelder.
 
@@ -49,4 +47,8 @@ Mit unserem Projekt konnten wir aufzeigen, dass es auch in der Stadt St. Gallen 
 
 ## What's next for Kandelabergelaber
 
-Um effektiv geeignete Standorte für Kandelaber-Lader zu finden, braucht es noch genauere Informationen zu den Parkplätzen in St. Gallen. Unsere aktuelle Lösung errechnet den ungefähren Standort der einzelnen Parkfelder. Mit der exakten Position der Parkfelder könnte genau ermittelt werden, welche Parkfelder tatsächlich in Frage kommen. Des weiteren braucht es auch seitens Frontend noch weitere Funktionen, damit die Benutzer z.B. direkt nach einem Standort suchen könnten, auch mit der Information, ob der Parkplatz noch frei ist (z.B. mit dem Datensatz der [freien Parkplätze](https://daten.stadt.sg.ch/explore/dataset/freie-parkplatze-in-der-stadt-stgallen-pls/information/?disjunctive.phid&disjunctive.phname)).
+Um effektiv geeignete Standorte für Kandelaber-Lader zu finden, braucht es noch genauere Informationen zu den Parkplätzen in St. Gallen. Unsere aktuelle Lösung errechnet den ungefähren Standort der einzelnen Parkfelder. Mit der exakten Position der Parkfelder könnte genau ermittelt werden, welche Parkfelder tatsächlich in Frage kommen. Mit weiteren Daten (z.B. wo sind stark besuchte POIs oder allgemein viel Verkehr) könnte zusätzlich priorisiert werden, welche Parkfelder als erstes aufgerüstet werden sollen.
+
+Des weiteren braucht es auch seitens Frontend noch weitere Funktionen, damit die Benutzer z.B. direkt nach einem Standort suchen könnten, auch mit der Information, ob der Parkplatz noch frei ist (z.B. mit dem Datensatz der [freien Parkplätze](https://daten.stadt.sg.ch/explore/dataset/freie-parkplatze-in-der-stadt-stgallen-pls/information/?disjunctive.phid&disjunctive.phname)).
+
+In Zukunft könnten die Elektroautos an diesen Ladestationen auch einen weiteren Beitrag leisten: Mit ihren grossen Akkus sind die Elektroautos auch ein Energiespeicher, der dem Stromnetz wieder zur Verfügung steht.
