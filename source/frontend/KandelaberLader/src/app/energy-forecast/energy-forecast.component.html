@@ -21,12 +21,8 @@
   </mat-grid-list> -->
   
   <div class="grid">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div> 
+
         <div *ngIf="forecast">
             <highcharts-chart [Highcharts]="Highcharts" class="chart" [options]="chartOptions"></highcharts-chart>
         </div>
-    </div>
   </div>

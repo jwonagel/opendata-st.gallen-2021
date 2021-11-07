@@ -65,9 +65,9 @@ export class AppComponent implements AfterViewInit {
       // })
     };
 
-    L.control.layers(this.baseMaps).addTo(this.map);
+    L.control.layers(this.baseMaps, undefined, {position: 'bottomleft'}).addTo(this.map);
     // this.map.fitSwitzerland();
-
+    this.map.zoomControl.setPosition('bottomright');
     console.log(this.map);
 
     this.map.flyTo([47.42391, 9.37477], 20)

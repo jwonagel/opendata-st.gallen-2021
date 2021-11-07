@@ -17,16 +17,9 @@
   
 #foreground {
     padding: 10px;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    /* width: 100%; */
-    /* position: relative; */
-    z-index: 100;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    /*position: absolute;*/
+    position: relative;
+    z-index: 2;
 
 }
 
@@ -47,6 +40,10 @@
     z-index: 0;
   }
 
-  app-energy-forecast {
-    background-color: red;
+  .energy-forecast {
+      position: absolute;
+      bottom: 112px;
+      right: 20px;
+      z-index: 100;
+      float: left;
   }

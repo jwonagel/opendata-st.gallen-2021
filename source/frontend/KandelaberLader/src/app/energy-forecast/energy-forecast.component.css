@@ -10,11 +10,4 @@
     bottom: 10px
 }
 
-.grid {
-    z-index: 100;
-    height: 100%;
-    display: grid;
-    grid-template: 1fr 1fr / 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-}
 
